@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Angular JS MAnipulating DOM</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://wallpapercave.com/wp/rFud6gx.jpg");
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+.new{
+  font-family: Arial;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#">Angular JS Intro</a>
+  <a href="#">Examples of Angular</a>
+  <a href="#">References</a>
+</div>
+
+<div class="content">
+  <h2>Angular JS</h2>
+  <p>Angular JS is one of the most Powerful JAvaScript framework that works on MVC architecture.
+  It consists of powerful tools that helps one in manipulation of DOM elements, CSS elements and much more.</p>
+  <h2>AngularJS DOM</h2>  
+      <div ng-app = "" class="new">  
+           <table border = "0">  
+            <tr>
+               <p>1)The ng-disabled element is used to disable certain features in the website.</p>  
+               <td><input type = "checkbox" ng-model = "enableDisableButton">Disable Button</td>  
+               <td><button ng-disabled = "enableDisableButton">Click Me!</button></td>  
+            </tr>  
+            <tr>  
+               <p>2)The ng-show element is used to show the hidden features in a site.</p>
+               <td><input type = "checkbox" ng-model = "showHide1">Show Button</td>  
+               <td><button ng-show = "showHide1">Click Me!</button></td>  
+            </tr>  
+             <tr> 
+               <p>3)The ng-hide element is used to hide certain features of the side.</p> 
+               <td><input type = "checkbox" ng-model = "showHide2">Hide Button</td>  
+               <td><button ng-hide = "showHide2">Click Me!</button></td>  
+            </tr>  
+             <tr> 
+               <p>4)The ng-click feature is used to count the number of times the button is clicked.</p>  
+               <td><p>Total click: {{ clickCounter }}</p></td>  
+               <td><button ng-click = "clickCounter = clickCounter + 1">Click Me!</button></td>  
+            </tr>  
+         </table>  
+         </div>  
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>  
+</div>
+
+</body>
+</html>
